@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/gameball_logo"
+            app:layout_constraintBottom_toTopOf="@+id/input_playerId"
+            app:layout_constraintEnd_toStartOf="@+id/tv_title"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gameball Native Demo"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@+id/input_apiKey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <EditText
+            android:id="@+id/input_playerId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="PlayerUniqueId"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/input_lastName"
+            app:layout_constraintEnd_toStartOf="@+id/input_language"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_apiKey"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <EditText
+            android:id="@+id/input_lastName"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Last Name"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/input_displayName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/input_firstName"
+            app:layout_constraintTop_toBottomOf="@+id/input_playerId"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <EditText
+            android:id="@+id/input_firstName"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="First Name"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/input_mobile"
+            app:layout_constraintEnd_toStartOf="@+id/input_lastName"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_playerId"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <EditText
+            android:id="@+id/input_mobile"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Mobile Number"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/input_email"
+            app:layout_constraintEnd_toStartOf="@+id/input_displayName"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_firstName"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <EditText
+            android:id="@+id/input_email"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/input_birthDate"
+            app:layout_constraintEnd_toStartOf="@+id/input_preferredLanguage"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_mobile"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <EditText
+            android:id="@+id/input_birthDate"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Birthdate"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toStartOf="@+id/input_joinDate"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_email"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <EditText
+            android:id="@+id/input_joinDate"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="JoinDate"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/input_birthDate"
+            app:layout_constraintTop_toBottomOf="@+id/input_preferredLanguage"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <EditText
+            android:id="@+id/input_preferredLanguage"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Preferred Lang"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/input_joinDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/input_email"
+            app:layout_constraintTop_toBottomOf="@+id/input_displayName"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <EditText
+            android:id="@+id/input_language"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Default Lang"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/input_lastName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/input_playerId"
+            app:layout_constraintTop_toBottomOf="@+id/input_apiKey"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <EditText
+            android:id="@+id/input_displayName"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Display Name"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/input_preferredLanguage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/input_mobile"
+            app:layout_constraintTop_toBottomOf="@+id/input_lastName"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <EditText
+            android:id="@+id/input_apiKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="ApiKey"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/input_playerId"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <Button
+            android:id="@+id/btn_widget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Widget"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_register"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_widget"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_birthDate"
+            app:layout_constraintVertical_bias="0.5"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Additional Attributes"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteY="27dp">
+
+                <EditText
+                    android:id="@+id/input_additionalKey"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:ems="10"
+                    android:hint="Key"
+                    android:inputType="text"
+                    tools:layout_editor_absoluteY="3dp" />
+
+                <EditText
+                    android:id="@+id/input_additionalValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:ems="10"
+                    android:hint="Value"
+                    android:inputType="text"
+                    tools:layout_editor_absoluteX="176dp"
+                    tools:layout_editor_absoluteY="3dp" />
+
+                <Button
+                    android:id="@+id/btn_additionalAdd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="+"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="352dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/btn_widget"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintVertical_bias="0.5"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Custom Attributes"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteY="27dp">
+
+                <EditText
+                    android:id="@+id/input_customKey"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:ems="10"
+                    android:hint="Key"
+                    android:inputType="text"
+                    tools:layout_editor_absoluteY="3dp" />
+
+                <EditText
+                    android:id="@+id/input_customValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:ems="10"
+                    android:hint="Value"
+                    android:inputType="text"
+                    tools:layout_editor_absoluteX="176dp"
+                    tools:layout_editor_absoluteY="3dp" />
+
+                <Button
+                    android:id="@+id/btn_customAdd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="+"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="352dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
